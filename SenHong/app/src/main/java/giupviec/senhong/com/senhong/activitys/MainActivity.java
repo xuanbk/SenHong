@@ -3,6 +3,7 @@ package giupviec.senhong.com.senhong.activitys;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,9 +28,10 @@ import giupviec.senhong.com.senhong.R;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
-    private TextView tvDay,tvStartTime,tvEndTime;
+    private TextView tvDay, tvStartTime, tvEndTime;
     Calendar myCalendar;
     DatePickerDialog.OnDateSetListener date;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-            this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
         myCalendar = Calendar.getInstance();
@@ -61,7 +63,8 @@ public class MainActivity extends AppCompatActivity
 
         };
     }
-    private void initUI(){
+
+    private void initUI() {
         tvDay = (TextView) findViewById(R.id.tvDay);
         tvDay.setOnClickListener(this);
 
@@ -71,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         tvEndTime = (TextView) findViewById(R.id.tvEndTime);
         tvEndTime.setOnClickListener(this);
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -98,22 +102,23 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
         if (id == R.id.nav_order) {
             // Handle the camera action
-        }  else if (id == R.id.nav_history) {
-
+        } else if (id == R.id.nav_history) {
+            startActivity(new Intent(MainActivity.this, HistoryActivity.class));
         } else if (id == R.id.nav_promotion) {
-
+            startActivity(new Intent(MainActivity.this, PromotionActivity.class));
         } else if (id == R.id.nav_share) {
-
+            startActivity(new Intent(MainActivity.this, ShareActivity.class));
         } else if (id == R.id.nav_notifycation) {
 
-        }else if (id == R.id.nav_help) {
-
+        } else if (id == R.id.nav_help) {
+            startActivity(new Intent(MainActivity.this, HelpActivity.class));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     private void updateLabel() {
 
         String myFormat = "MM/dd/yy"; //In which you need put here
@@ -121,26 +126,28 @@ public class MainActivity extends AppCompatActivity
 
         tvDay.setText(sdf.format(myCalendar.getTime()));
     }
-    private void showTimePicker(final TextView view){
+
+    private void showTimePicker(final TextView view) {
         int hour = myCalendar.get(Calendar.HOUR_OF_DAY);
         int minute = myCalendar.get(Calendar.MINUTE);
         TimePickerDialog mTimePicker;
         mTimePicker = new TimePickerDialog(MainActivity.this, new TimePickerDialog.OnTimeSetListener() {
             @Override
             public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                String minutes = selectedMinute < 10 ? "0"+selectedMinute : ""+ selectedMinute;
-                String hour = selectedHour < 10 ? "0"+selectedHour : ""+ selectedHour;
-                view.setText( hour + "h " + minutes +"p");
+                String minutes = selectedMinute < 10 ? "0" + selectedMinute : "" + selectedMinute;
+                String hour = selectedHour < 10 ? "0" + selectedHour : "" + selectedHour;
+                view.setText(hour + "h " + minutes + "p");
             }
         }, hour, minute, true);//Yes 24 hour time
         mTimePicker.setTitle("Select Time");
         mTimePicker.show();
     }
+
     @Override
-    public void onClick( View view) {
-        switch (view.getId()){
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.tvDay:
-                new DatePickerDialog(MainActivity.this, date  , myCalendar
+                new DatePickerDialog(MainActivity.this, date, myCalendar
                         .get(Calendar.YEAR), myCalendar.get(Calendar.MONTH),
                         myCalendar.get(Calendar.DAY_OF_MONTH)).show();
                 break;
