@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:showIn="@layout/app_bar_main"
+        android:layout_above="@+id/lnBottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Địa chỉ"
+            android:textColor="@android:color/black"
+            android:typeface="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_location_pin"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingLeft="15dp"
+            android:text="Địa chỉ"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Ngày làm"
+            android:textColor="@android:color/black"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_calendar"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingLeft="15dp"
+            android:text="Chọn ngày làm"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Giờ làm"
+            android:textColor="@android:color/black"
+            android:typeface="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingLeft="25dp"
+            android:text="Ca làm"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingLeft="30dp"
+            android:text="Giờ bắt đầu"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray"></View>
+
+        <TextView
+            android:id="@+id/tvEndTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingLeft="30dp"
+            android:text="Giờ kết thúc"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@android:color/darker_gray"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Yêu cầu chi tiết"
+            android:textColor="@android:color/black"
+            android:typeface="normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_icon"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:minHeight="35dp"
+            android:paddingLeft="25dp"
+            android:text="Nhân viên sẽ làm tốt hơn nếu biết rõ yêu cầu của khách "
+            android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lnBottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:text="TIẾP TỤC"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:background="@drawable/bg_button"
+            android:layout_height="50dp" />
+    </LinearLayout>
+</RelativeLayout>
