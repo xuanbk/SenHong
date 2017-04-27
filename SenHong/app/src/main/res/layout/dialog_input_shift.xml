@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/cbMorning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ca sáng (7h00 ~ 12h30)" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/cbAffternoon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ca Chiều (13h00 ~ 17h30)" />
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/cbNight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ca Tối (18h00 ~ 23h00)" />
+
+    <Button
+        android:id="@+id/btDone"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:text="Xong"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+</LinearLayout>

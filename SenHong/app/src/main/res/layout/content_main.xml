@@ -8,9 +8,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/lnBottom"
         android:orientation="vertical"
-        tools:showIn="@layout/app_bar_main"
-        android:layout_above="@+id/lnBottom">
+        tools:showIn="@layout/app_bar_main">
 
         <TextView
             android:layout_width="match_parent"
@@ -23,6 +23,7 @@
             android:typeface="normal" />
 
         <TextView
+            android:id="@+id/tvAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -68,6 +69,7 @@
             android:typeface="normal" />
 
         <TextView
+            android:id="@+id/tvShift"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -127,30 +129,47 @@
             android:typeface="normal" />
 
         <TextView
+            android:id="@+id/tvDetailOrder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/ic_icon"
             android:drawablePadding="15dp"
             android:gravity="center_vertical"
+            android:maxHeight="100dp"
             android:minHeight="35dp"
             android:paddingLeft="25dp"
             android:text="Nhân viên sẽ làm tốt hơn nếu biết rõ yêu cầu của khách "
             android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Số giờ làm(giờ) : 3.5\n\nGía dịch vụ (VNĐ) : 115.500"
+            android:textColor="@android:color/black"
+            android:typeface="normal" />
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/lnBottom"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
         <Button
+            android:id="@+id/btNext"
             android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:layout_margin="5dp"
+            android:background="@drawable/bg_button"
             android:text="TIẾP TỤC"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:background="@drawable/bg_button"
-            android:layout_height="50dp" />
+            android:textSize="20sp" />
     </LinearLayout>
 </RelativeLayout>

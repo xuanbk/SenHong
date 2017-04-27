@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhập địa chỉ chính xác để nhân viên tìm được nhà bạn" />
+
+    <Spinner
+        android:id="@+id/spCity"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></Spinner>
+
+    <Spinner
+        android:id="@+id/spDistrict"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></Spinner>
+
+    <EditText
+        android:id="@+id/etAddress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Số nhà, ngõ, phố, đường, phường"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/btDone"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:text="Xong"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+</LinearLayout>

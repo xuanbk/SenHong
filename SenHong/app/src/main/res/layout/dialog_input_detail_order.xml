@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nhân viên sẽ làm tốt hơn nếu biết rõ chi tiết yêu cầu của khách hàng"/>
+
+    <EditText
+        android:id="@+id/etDetailOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:hint="Yêu cầu chi tiết"
+        android:textSize="12dp" />
+    <Button
+        android:id="@+id/btDone"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_button"
+        android:text="Xong"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+</LinearLayout>

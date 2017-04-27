@@ -22,13 +22,29 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:paddingBottom="25dp"
-        android:paddingTop="15dp"
-        android:text="Bạn có thể thanh toán phí dịch vụ trước với chúng tôi để giữ người giúp việc bằng cách chuyển khoản theo thông tin dưới đây\n\n- Tên tài khoản : SEN HONG\n- Số tài khoản : 013163247\n- Tại ngân hàng Vietcombank - Chi nhánh Thành Công - Hà Nội"
-        android:textColor="@android:color/black" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Nhập email để nhận mật khẩu mới" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:hint="Email" />
 
+    <Button
+        android:id="@+id/btnCreateaAccount"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_button"
+        android:text="Đăng nhập"
+        android:textColor="@android:color/white" />
 </LinearLayout>
